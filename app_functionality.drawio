@@ -272,6 +272,9 @@
         <mxCell id="KrKuB5EDoftL9FAvKzFv-26" value="User enters their credentials into a form" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="220" y="270" width="170" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-31" value="Ensure input fields are correctly formatted" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="675" y="350" width="240" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
