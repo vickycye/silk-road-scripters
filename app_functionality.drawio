@@ -211,7 +211,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="170" y="200" width="270" height="270" as="geometry" />
+          <mxGeometry x="170" y="200" width="270" height="290" as="geometry" />
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-13" value="Signup / Login / Logout" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="220" y="170" width="170" height="30" as="geometry" />
@@ -223,7 +223,7 @@
           <mxGeometry x="240" y="320" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-16" value="useFormStatus()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="237.5" y="390" width="135" height="30" as="geometry" />
+          <mxGeometry x="235" y="410" width="135" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KrKuB5EDoftL9FAvKzFv-17" target="KrKuB5EDoftL9FAvKzFv-19">
           <mxGeometry relative="1" as="geometry" />
@@ -254,14 +254,32 @@
         <mxCell id="KrKuB5EDoftL9FAvKzFv-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KrKuB5EDoftL9FAvKzFv-19" target="KrKuB5EDoftL9FAvKzFv-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-32" value="Invalid input/not a real user" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KrKuB5EDoftL9FAvKzFv-20">
+          <mxGeometry x="-0.3" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KrKuB5EDoftL9FAvKzFv-19" target="KrKuB5EDoftL9FAvKzFv-22">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-33" value="Valid input/user match" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KrKuB5EDoftL9FAvKzFv-23">
+          <mxGeometry x="-0.3125" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-19" value="Form Validation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="730" y="320" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KrKuB5EDoftL9FAvKzFv-22" target="KrKuB5EDoftL9FAvKzFv-16">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KrKuB5EDoftL9FAvKzFv-22" target="KrKuB5EDoftL9FAvKzFv-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-36" value="POST request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KrKuB5EDoftL9FAvKzFv-35">
+          <mxGeometry x="-0.4061" y="-1" relative="1" as="geometry">
+            <mxPoint x="16" y="-1" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-22" value="Data Request" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1175" y="320" width="130" height="30" as="geometry" />
@@ -274,6 +292,12 @@
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-31" value="Ensure input fields are correctly formatted" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="675" y="350" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-34" value="If fail: update UI with error message&lt;br&gt;If success: user is redirected + session token stored" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="191.25" y="360" width="222.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-37" value="Disables the submit button while the request is in progress and provide feedback once the request is completed" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="645" y="440" width="315" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
