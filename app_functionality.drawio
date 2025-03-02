@@ -284,6 +284,14 @@
         <mxCell id="KrKuB5EDoftL9FAvKzFv-22" value="Data Request" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1175" y="320" width="130" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KrKuB5EDoftL9FAvKzFv-25" target="KrKuB5EDoftL9FAvKzFv-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-44" value="generate session ID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KrKuB5EDoftL9FAvKzFv-42">
+          <mxGeometry x="0.032" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-25" value="Authentication" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1360" y="380" width="130" height="30" as="geometry" />
         </mxCell>
@@ -298,6 +306,30 @@
         </mxCell>
         <mxCell id="KrKuB5EDoftL9FAvKzFv-37" value="Disables the submit button while the request is in progress and provide feedback once the request is completed" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="645" y="440" width="315" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KrKuB5EDoftL9FAvKzFv-38" target="KrKuB5EDoftL9FAvKzFv-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-38" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1105" y="480" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-39" value="Session Management" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1105" y="450" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-40" value="Stateless" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="500" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-41" value="Database" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="500" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-43" value="session ID sent to client in HTTP cookie" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1237.5" y="540" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-45" value="generates a JWT w/ HTTP-only cookie" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1117.5" y="540" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KrKuB5EDoftL9FAvKzFv-46" value="cookies()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="650" width="100" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
