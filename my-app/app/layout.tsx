@@ -11,9 +11,10 @@ import {
 // Import fonts
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components /Navbar";
 
 // Import Components 
-// import { Navbar } from '../components/Navbar';
+
 
 
 /**
@@ -45,7 +46,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <header className="flex justify-end items-center p-4 gap-4 h-16">
           <SignedOut>
-            {/* <Navbar/> */}
+            <Navbar/>
             <SignInButton />
             <SignUpButton />
           </SignedOut>
