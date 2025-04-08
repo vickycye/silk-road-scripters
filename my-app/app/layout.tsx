@@ -8,13 +8,12 @@ import {
   UserButton,
 } from '@clerk/nextjs'
 
-// Import fonts
+// Import style
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components /Navbar";
 
 // Import Components 
-
+import Navbar from "./components /Navbar";
 
 
 /**
