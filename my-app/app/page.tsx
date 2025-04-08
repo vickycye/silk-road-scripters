@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Interactive Cards Gallery</title>
         <meta name="description" content="Browse our collection of creative content!"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/images/silk.png"/>
       </Head>
 
       <main>
