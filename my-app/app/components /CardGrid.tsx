@@ -6,36 +6,42 @@ const cardData = [
     {
         id: '1',
         title: 'Amstaff Terrier',
+        author: 'Terrier Foundation',
         description: 'I bought a property in egypt, Freddy fazbear never fails to Nick Eh 30 sus',
         imageUrl: 'images/amstaff-terrier.jpeg'
     },
     {
         id: '2',
         title: 'Black Laborador Retriever',
+        author: 'We Love Labs',
         description: 'Put the milk in the bag prime chat is this real ',
         imageUrl: 'images/black-labrador-retriever.jpg'
     },
     {
         id: '3',
         title: 'Border Collie',
+        author: 'Collie Warriors',
         description: 'goofy ahh 💀😭',
         imageUrl: 'images/border-collie.webp'
     },
     {
         id: '4',
         title: 'Chow Chow',
+        author: 'Soup for Dinner',
         description: 'I bought a property in egypt, Freddy fazbear never fails to Nick Eh 30 sus',
         imageUrl: 'images/chow-chow.webp'
     },
     {
         id: '5',
         title: 'German Shepherd',
+        author: 'I Love German Shepherds',
         description: 'Put the milk in the bag prime chat is this real ',
         imageUrl: 'images/german-shepherd.jpg'
     },
     {
         id: '6',
         title: 'Poodle',
+        author: 'Poodle Doodle',
         description: 'goofy ahh 💀😭',
         imageUrl: 'images/poodle.jpg'
     },
@@ -54,6 +60,7 @@ const CardGrid: React.FC = () => {
                         key={card.id}
                         id={card.id}
                         title={card.title}
+                        author={card.author}
                         description={card.description}
                         imageUrl={card.imageUrl}
                     />

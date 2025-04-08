@@ -7,6 +7,7 @@ import { Heart, Share } from 'lucide-react';
 interface CardProps {
     id: string; // unique identifier for the card -- easier for routing
     title: string; // title of the card -- perhaps the name of the item?
+    author: string; // author of the creation -- who made this?
     description: string; // description of the card -- what is this item? 
     imageUrl: string; // URL of the image -- location of the image
 }
@@ -14,6 +15,7 @@ interface CardProps {
 const InteractiveCard: React.FC<CardProps> = ({
     id, 
     title,
+    author,
     description,
     imageUrl,
 }) => {
@@ -42,7 +44,7 @@ const InteractiveCard: React.FC<CardProps> = ({
 
     return (
         <Link href={`/cards/${id}`} passHref>
-            <div className="group relative w-64 h-80 rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
+            <div className="group relative w-64 h-80 overflow-hidden shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
                 {/* Card Image - filling the entire card */}
                 <div className="w-full h-full">
                     <img 
@@ -53,8 +55,9 @@ const InteractiveCard: React.FC<CardProps> = ({
                 </div>
 
                 {/* Info overlay - swipes up from bottom on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-white bg-opacity-75 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-4">
+                <div className="absolute bottom-0 left-0 right-0 h-1/2 opacity-95 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-4">
                     <h3 className="text-lg font-semibold text-emerald-950 mb-1 truncate">{title}</h3>
+                    <p className="text-sm text-sky-700 line-clamp-2 font-bold mb-1">{author}</p>
                     <p className="text-sm text-emerald-700 line-clamp-2">{description}</p>
                     
                     {/* Action buttons */}
