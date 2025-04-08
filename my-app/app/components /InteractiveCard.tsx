@@ -43,7 +43,7 @@ const InteractiveCard: React.FC<CardProps> = ({
         <Link href={`/cards/${id}`} passHref>
             <div className = "group relative w-64 h-80 rounded-lg overflow-hidden shadow-md trasition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer bg-white">
                 {/* Card Image */}
-                <div className = "h-40 overflow-hidden">
+                <div className = "width-full h-full overflow-hidden">
                     <img src={imageUrl || 'images/silk.png'}
                         alt={title}
                         className = "w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
@@ -53,8 +53,8 @@ const InteractiveCard: React.FC<CardProps> = ({
 
             {/* Card content */}
             <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 truncate">{title}</h3>
-                <p className="text-sm text-gray-600 line-clamp-3">{description}</p>
+                <h3 className="text-lg font-semibold text-emerald-950 mb-2 truncate">{title}</h3>
+                <p className="text-sm text-emerald-700 line-clamp-3">{description}</p>
             </div>
 
             {/* Action buttons */}
@@ -74,13 +74,12 @@ const InteractiveCard: React.FC<CardProps> = ({
                     aria-label="Share"
                 >
                     <Share size={20}
-                    className="tetx-gray-500"/>
+                    className="text-gray-500"/>
                 </button>
             </div>
         </Link>
-    )
-
-}
+    );
+};
 
 
 export default InteractiveCard;

@@ -6,16 +6,6 @@ import CardGrid from "./components /CardGrid";
 export default function Home() {
   return (
     <div>
-      <h1> Welcome to the Silk Road </h1>
-      <p> This is the place to be for all your silk needs </p>
-      <Image
-        src="/images/silk.png"
-        alt="Silk"
-        width={500}
-        height={500}
-      />
-
-
       {/* Vicky throws card stuff in here */}
       <Head>
         <title>Interactive Cards Gallery</title>
