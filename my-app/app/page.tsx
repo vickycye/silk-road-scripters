@@ -6,21 +6,11 @@ import CardGrid from "./components /CardGrid";
 export default function Home() {
   return (
     <div>
-      <h1> Welcome to the Silk Road </h1>
-      <p> This is the place to be for all your silk needs </p>
-      <Image
-        src="/images/silk.png"
-        alt="Silk"
-        width={500}
-        height={500}
-      />
-
-
       {/* Vicky throws card stuff in here */}
       <Head>
         <title>Interactive Cards Gallery</title>
         <meta name="description" content="Browse our collection of creative content!"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/images/silk.png"/>
       </Head>
 
       <main>
@@ -35,7 +25,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="bg-gray-800 text-white py-4">
+      <footer className="bg-emerald-900 text-white py-4">
         <div className="container mx-auto text-center">
           <p>&copy; 2025 Silk Road. All rights reserved.</p>
         </div>
