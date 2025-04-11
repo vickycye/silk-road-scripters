@@ -9,3 +9,4 @@ export default function Searchbar() {
             <input type="text" id='search' name='search' placeholder='Search...' className='bg-green-300 autofill:bg-green-300  w-85 form-input pl-5 outline-hidden text-sm'/>             
           </label>
         </div>
+  )}

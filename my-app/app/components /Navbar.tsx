@@ -1,14 +1,16 @@
 import Link from 'next/link';
 import React from 'react'
-import { House, ShoppingCart, GraduationCap, MessagesSquare, Store, Settings, CircleUserRound } from 'lucide-react'
+import { House, ShoppingCart, GraduationCap, MessagesSquare, Store, Settings } from 'lucide-react'
+import { UserButton } from '@clerk/nextjs';
 
 export default function Navbar() {
   return (
     <nav className = "fixed top-0 left-0 z-40 w-20 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-green-300">
         <div className='grid gap-45 flex items-center justify-center py-5'>
-          <Link href="/login">
+          {/* <Link href="/login">
             <CircleUserRound size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer' />
-          </Link>
+          </Link> */}
+          <UserButton/>
           <div className='flex grid gap-10'>
             <Link href="/">
               <House size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
