@@ -15,11 +15,10 @@ export default function Home() {
       </Head>
 {/* Figure out where to put se */}
       <main>
-        <div className="min-h-screen bg-green-100">
-          <header className="bg-green-100 shadow">
+        <div className="min-h-screen bg-green-100 dark:bg-red-300">
+          <header className="bg-green-100 shadow dark:bg-red-300">
             <div className="container mx-auto py-6 px-4">
               <Searchbar/>
-              {/* <h1 className="text-2xl font-bold text-gray-800">content platform</h1> */}
             </div>
           </header>
 
