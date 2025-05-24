@@ -5,24 +5,32 @@ import { UserButton } from '@clerk/nextjs';
 
 export default function Navbar() {
   return (
-    <nav className = "fixed top-0 left-0 z-40 w-20 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-green-300">
-        <div className='grid gap-45 flex items-center justify-center py-5'>
-          {/* <Link href="/login">
-            <CircleUserRound size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer' />
-          </Link> */}
+    <nav className="fixed top-0 left-0 z-40 w-20 h-screen bg-green-300 transition-transform -translate-x-full sm:translate-x-0">
+      <div className="flex flex-col items-center justify-between h-full py-6">
+        <div className="flex flex-col items-center space-y-6">
           <UserButton/>
-          <div className='flex grid gap-10'>
-            <Link href="/">
-              <House size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
+          <div className="flex flex-col space-y-6">
+            <Link href="/" className="hover:bg-green-400 p-2 rounded-lg transition-colors">
+              <House size={35} className="text-[#CCC9A1]" strokeWidth={1}/>
             </Link>
-            <ShoppingCart size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
-            <GraduationCap size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
-            <MessagesSquare size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
-            <Store size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
+            <Link href="/shop" className="hover:bg-green-400 p-2 rounded-lg transition-colors">
+              <ShoppingCart size={35} className="text-[#CCC9A1]" strokeWidth={1}/>
+            </Link>
+            <Link href="/learn" className="hover:bg-green-400 p-2 rounded-lg transition-colors">
+              <GraduationCap size={35} className="text-[#CCC9A1]" strokeWidth={1}/>
+            </Link>
+            <Link href="/messages" className="hover:bg-green-400 p-2 rounded-lg transition-colors">
+              <MessagesSquare size={35} className="text-[#CCC9A1]" strokeWidth={1}/>
+            </Link>
+            <Link href="/store" className="hover:bg-green-400 p-2 rounded-lg transition-colors">
+              <Store size={35} className="text-[#CCC9A1]" strokeWidth={1}/>
+            </Link>
           </div>
-          <Settings size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
         </div>
-        
+        <Link href="/settings" className="hover:bg-green-400 p-2 rounded-lg transition-colors">
+          <Settings size={35} className="text-[#CCC9A1]" strokeWidth={1}/>
+        </Link>
+      </div>
     </nav>
   );
 }

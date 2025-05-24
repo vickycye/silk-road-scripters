@@ -9,22 +9,15 @@ import {
 } from '@clerk/nextjs'
 
 // Import style
-import { Geist, Geist_Mono } from "next/font/google";
+import { GeistSans, GeistMono } from 'geist/font'
 import "./globals.css";
 // Import Components 
 
 /**
  * Imported fonts are added to the global stylesheet.
  */
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = GeistSans;
+const geistMono = GeistMono;
 
 export const metadata: Metadata = {
   title: "The Silk Road",
@@ -39,7 +32,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.className} ${geistMono.className} antialiased`}>
         {/* <header className="flex justify-end items-center p-4 gap-4 h-16 bg-white">
           <SignedOut>
             <SignInButton />
