@@ -1,9 +1,10 @@
-import CardGrid from "./components /CardGrid";
-import Navbar from "./components /Navbar";
-import Searchbar from "./components /Searchbar";
-import Footer from "./components /Footer";
+import CardGrid from "../components /CardGrid";
+import Footer from "../components /Footer";
+import Navbar from "../components /Navbar";
+import Searchbar from "../components /Searchbar";
 
-export default function Home() {
+
+export default function Markets() {
   return (
     <div className='pl-20'>
       <Navbar/>
