@@ -3,20 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
+@custom-variant dark (&:is(.dark *));
 
-  --color-green-300: oklch(0.53 0.0546 137.73);
-  --color-green-100: oklch(0.83 0.0537 103.95);
+
+@theme {
+  --color-green-300: oklch(0.53 0.0546 137.73); 
+  --color-green-100: oklch(0.83 0.0537 103.95); 
+  --color-red-300: oklch(0.18 0.0703 19.99); 
+  --color-red-100: oklch(0.51 0.1392 32.99); 
 }
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(0.83 0.0537 103.95);
+  --foreground: oklch(0.53 0.0546 137.73);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: oklch(0.18 0.0703 19.99);
+    --foreground: oklch(0.51 0.1392 32.99);
   }
 }
 
