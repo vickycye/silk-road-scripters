@@ -25,10 +25,18 @@ export default function Navbar() {
             <Link href="/">
               <House size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
             </Link>
-            <ShoppingCart size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
-            <GraduationCap size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
-            <MessagesSquare size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
-            <Store size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
+            <Link href={"/shoppingcart"}>
+              <ShoppingCart size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
+            </Link>
+            <Link href={"/learn"}>
+              <GraduationCap size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
+            </Link>
+            <Link href={"/messages"}>
+              <MessagesSquare size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
+            </Link>
+            <Link href={"/markets"}>
+              <Store size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer'/>
+            </Link>
           </div>
           <Settings size={35} color="#CCC9A1" strokeWidth={1} className='cursor-pointer mt-10'/>
         </div>
