@@ -1,16 +1,15 @@
-import CardGrid from "./components /CardGrid";
-import Navbar from "./components /Navbar";
-import Searchbar from "./components /Searchbar";
-import Footer from "./components /Footer";
+import CardGrid from "./components/CardGrid";
+import Navbar from "./components/Navbar";
+import Searchbar from "./components/Searchbar";
 
 export default function Home() {
   return (
-    <div className='pl-20'>
+    <div>
       <Navbar/>
 
       <main>
-        <div className="min-h-screen bg-green-100 dark:bg-red-300">
-          <header className="bg-green-100 shadow dark:bg-red-300">
+        <div className="min-h-screen bg-[#e6e1d6] dark:bg-[#3c3c3c]">
+          <header className="bg-[#e6e1d6] shadow dark:bg-[#3c3c3c]">
             <div className="container mx-auto py-6 px-4">
               <Searchbar/>
             </div>
@@ -19,7 +18,6 @@ export default function Home() {
           <CardGrid />
         </div>
       </main>
-      <Footer/>
     </div>
   );
 }

@@ -1,13 +1,10 @@
-import { NextResponse } from 'next/server';
-import { auth } from '@clerk/nextjs';
-import { PrismaClient } from '@prisma/client';
-import { CartItem } from '@/app/store/cart';
+import { NextResponse, NextRequest } from 'next/server';
+import { getAuth } from '@clerk/nextjs/server';
+import type { CartItem } from '../../../store/cart';
 
-const prisma = new PrismaClient();
-
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
-    const { userId } = auth();
+    const { userId } = getAuth(request);
     if (!userId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -15,23 +12,7 @@ export async function POST(request: Request) {
     const { items } = await request.json();
     const total = items.reduce((sum: number, item: CartItem) => sum + item.price * item.quantity, 0);
 
-    // Create order in database
-    const order = await prisma.order.create({
-      data: {
-        userId,
-        total,
-        items: {
-          create: items.map((item: CartItem) => ({
-            productId: item.productId,
-            quantity: item.quantity,
-            price: item.price,
-          })),
-        },
-      },
-    });
-
-    // Create PayPal order
-    const paypalResponse = await fetch(`${process.env.PAYPAL_API_URL}/v2/checkout/orders`, {
+    const response = await fetch(`${process.env.PAYPAL_API_URL}/v2/checkout/orders`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -50,20 +31,10 @@ export async function POST(request: Request) {
       }),
     });
 
-    const paypalOrder = await paypalResponse.json();
-
-    // Update order with PayPal order ID
-    await prisma.order.update({
-      where: { id: order.id },
-      data: { paypalOrderId: paypalOrder.id },
-    });
-
-    return NextResponse.json(paypalOrder);
+    const data = await response.json();
+    return NextResponse.json(data);
   } catch (error) {
-    console.error('Error creating order:', error);
-    return NextResponse.json(
-      { error: 'Failed to create order' },
-      { status: 500 }
-    );
+    console.error('Error creating PayPal order:', error);
+    return NextResponse.json({ error: 'Failed to create order' }, { status: 500 });
   }
 } 

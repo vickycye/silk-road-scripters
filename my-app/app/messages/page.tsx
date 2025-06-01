@@ -1,24 +1,18 @@
 import React from 'react'
-import Navbar from '../components /Navbar'
-import Footer from '../components /Footer'
-import ChatList from '../components /ChatList'
-import ChatWindow from '../components /ChatWindow'
+import ChatList from '../components/ChatList'
+import ChatWindow from '../components/ChatWindow'
 
 export default function Messages() {
   return (
-    <div className='pl-20'>
-        <Navbar/>
-        <main>
-        <div className="min-h-screen bg-green-100 dark:bg-red-300">
-          <div className="flex h-screen text-green-300 dark:text-red-100 bg-green-100 dark:bg-red-300">
-            <div className="flex w-full">
-              <ChatList />
-              <ChatWindow />
-            </div>
+    <main>
+      <div className="min-h-screen bg-[#e6e1d6] dark:bg-[#3c3c3c]">
+        <div className="flex h-screen text-[#5d4e3a] dark:text-[#b8b0a0] bg-[#e6e1d6] dark:bg-[#3c3c3c]">
+          <div className="flex w-full">
+            <ChatList />
+            <ChatWindow />
           </div>
         </div>
-        <Footer/>
-      </main>
-    </div>   
-    )
+      </div>
+    </main>
+  )
 }

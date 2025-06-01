@@ -1,18 +1,18 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export interface CartItem {
+export type CartItem = {
   id: string;
   productId: string;
   name: string;
-  price: number;
   quantity: number;
+  price: number;
   imageUrl: string;
-}
+};
 
 interface CartStore {
   items: CartItem[];
-  addItem: (item: Omit<CartItem, 'id'>) => void;
+  addItem: (item: CartItem) => void;
   removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;

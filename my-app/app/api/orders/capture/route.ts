@@ -1,12 +1,9 @@
-import { NextResponse } from 'next/server';
-import { auth } from '@clerk/nextjs';
-import { PrismaClient } from '@prisma/client';
+import { NextResponse, NextRequest } from 'next/server';
+import { getAuth } from '@clerk/nextjs/server';
 
-const prisma = new PrismaClient();
-
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
-    const { userId } = auth();
+    const { userId } = getAuth(request);
     if (!userId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -14,7 +11,7 @@ export async function POST(request: Request) {
     const { orderId } = await request.json();
 
     // Capture PayPal payment
-    const paypalResponse = await fetch(
+    const response = await fetch(
       `${process.env.PAYPAL_API_URL}/v2/checkout/orders/${orderId}/capture`,
       {
         method: 'POST',
@@ -25,27 +22,10 @@ export async function POST(request: Request) {
       }
     );
 
-    if (!paypalResponse.ok) {
-      throw new Error('Failed to capture PayPal payment');
-    }
-
-    // Update order status in database
-    await prisma.order.updateMany({
-      where: {
-        paypalOrderId: orderId,
-        userId,
-      },
-      data: {
-        status: 'PAID',
-      },
-    });
-
-    return NextResponse.json({ success: true });
+    const data = await response.json();
+    return NextResponse.json(data);
   } catch (error) {
-    console.error('Error capturing order:', error);
-    return NextResponse.json(
-      { error: 'Failed to capture order' },
-      { status: 500 }
-    );
+    console.error('Error capturing PayPal payment:', error);
+    return NextResponse.json({ error: 'Failed to capture payment' }, { status: 500 });
   }
 } 

@@ -50,7 +50,7 @@ const cardData = [
 const CardGrid: React.FC = () => {
     return (
         <div className="container mx-auto py-8 px-4">
-            <h1 className="text-3xl font-bold text-emerald-800 dark:text-red-100 mb-14">
+            <h1 className="text-3xl font-bold text-[#3d2f1f] dark:text-[#e8dcc8] mb-14">
                 Find your favorite dog breed!
             </h1>
 
