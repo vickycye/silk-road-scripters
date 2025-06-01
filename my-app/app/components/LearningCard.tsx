@@ -1,40 +1,49 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { fetchVideoDetails } from '../services/youtube';
+// import { fetchVideoDetails } from '../services/youtube';
 
-interface VideoDetails {
-  channelTitle: string;
-  title: string;
-  thumbnailUrl: string;
-}
+// interface VideoDetails {
+//   channelTitle: string;
+//   title: string;
+//   thumbnailUrl: string;
+// }
 
 interface LearningCardProps {
   title: string;
   craftType: string;
   videoId: string;
   thumbnailUrl: string;
+  // Optional channelTitle since we won't be fetching it from the API
+  channelTitle?: string;
 }
 
-const LearningCard: React.FC<LearningCardProps> = ({ title, craftType, videoId, thumbnailUrl }) => {
-  const [videoDetails, setVideoDetails] = useState<VideoDetails | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+const LearningCard: React.FC<LearningCardProps> = ({ 
+  title, 
+  craftType, 
+  videoId, 
+  thumbnailUrl,
+  channelTitle 
+}) => {
+  // Removing API integration
+  // const [videoDetails, setVideoDetails] = useState<VideoDetails | null>(null);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const loadVideoDetails = async () => {
-      try {
-        const [details] = await fetchVideoDetails([videoId]);
-        if (details) {
-          setVideoDetails(details);
-        }
-      } catch (error) {
-        console.error('Failed to fetch video details:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const loadVideoDetails = async () => {
+  //     try {
+  //       const [details] = await fetchVideoDetails([videoId]);
+  //       if (details) {
+  //         setVideoDetails(details);
+  //       }
+  //     } catch (error) {
+  //       console.error('Failed to fetch video details:', error);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
 
-    loadVideoDetails();
-  }, [videoId]);
+  //   loadVideoDetails();
+  // }, [videoId]);
 
   return (
     <div className="relative bg-white dark:bg-[#5d4e3a] rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-[1.02]">
@@ -69,9 +78,9 @@ const LearningCard: React.FC<LearningCardProps> = ({ title, craftType, videoId, 
           <h3 className="text-lg font-semibold text-[#3d2f1f] dark:text-[#e8dcc8] line-clamp-2 hover:text-[#b8860b] dark:hover:text-[#d4a574] transition-colors">
             {title}
           </h3>
-          {!isLoading && videoDetails && (
+          {channelTitle && (
             <p className="mt-2 text-sm text-[#5d4e3a] dark:text-[#b8b0a0] hover:text-[#b8860b] dark:hover:text-[#d4a574] transition-colors">
-              {videoDetails.channelTitle}
+              {channelTitle}
             </p>
           )}
         </div>

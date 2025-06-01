@@ -5,10 +5,10 @@ import InteractiveCard from './InteractiveCard';
 const cardData = [
     {
         id: '1',
-        title: 'Amstaff Terrier',
+        title: 'Yarn',
         author: 'Terrier Foundation',
         description: 'I bought a property in egypt, Freddy fazbear never fails to Nick Eh 30 sus',
-        imageUrl: 'images/amstaff-terrier.jpeg'
+        imageUrl: 'images/yarn.png'
     },
     {
         id: '2',
