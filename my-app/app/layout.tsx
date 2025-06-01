@@ -11,7 +11,9 @@ import {
 // Import style
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// Import Components 
+
+// Import components
+import Footer from "./components/Footer";
 
 /**
  * Imported fonts are added to the global stylesheet.
@@ -38,20 +40,14 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* <header className="flex justify-end items-center p-4 gap-4 h-16 bg-white">
-          <SignedOut>
-            <SignInButton />
-            <SignUpButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </header> */}
-        {children}
-      </body>
-    </html>
+      <html lang="en" className="light" style={{ colorScheme: 'light' }}>
+        <body className={`${geistSans.className} ${geistMono.className} antialiased min-h-screen flex flex-col`}>
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
