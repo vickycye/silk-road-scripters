@@ -11,35 +11,35 @@ const tutorials = [
     title: "Traditional Japanese Paper Crafting Techniques",
     craftType: "papercraft",
     videoId: "hM5M2Fu0RtY",
-    thumbnailUrl: `https://i.ytimg.com/vi/hM5M2Fu0RtY/hqdefault.jpg`,
+    thumbnailUrl: '/images/origami.png',
     channelTitle: "Japanese Crafts"
   },
   {
     title: "Advanced Textile Art Techniques for Beginners",
     craftType: "textile arts",
     videoId: "zzWX2dx8ufc",
-    thumbnailUrl: `https://i.ytimg.com/vi/zzWX2dx8ufc/hqdefault.jpg`,
+    thumbnailUrl: '/images/origami.png',
     channelTitle: "Textile Arts Workshop"
   },
   {
     title: "Creative Fiber Art Techniques and Inspiration",
     craftType: "fiber art",
     videoId: "v4bC1P3f8qM",
-    thumbnailUrl: `https://i.ytimg.com/vi/v4bC1P3f8qM/hqdefault.jpg`,
+    thumbnailUrl: '/images/origami.png',
     channelTitle: "Fiber Arts Studio"
   },
   {
     title: "Essential Knitting Techniques for Beautiful Projects",
     craftType: "knitting",
     videoId: "XxgIEeIBCFo",
-    thumbnailUrl: `https://i.ytimg.com/vi/XxgIEeIBCFo/hqdefault.jpg`,
+    thumbnailUrl: '/images/origami.png',
     channelTitle: "Knitting Masterclass"
   },
   {
     title: "Modern Crocheting Patterns and Techniques",
     craftType: "crocheting",
     videoId: "cZdO2e8K29o",
-    thumbnailUrl: `https://i.ytimg.com/vi/cZdO2e8K29o/hqdefault.jpg`,
+    thumbnailUrl: '/images/origami.png',
     channelTitle: "Crochet Academy"
   }
 ];

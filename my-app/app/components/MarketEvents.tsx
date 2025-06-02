@@ -18,7 +18,7 @@ const events: Event[] = [
     title: 'Spring Artisan Market 2024',
     date: 'Mar 15-17, 2024',
     location: 'Seattle Center',
-    imageUrl: '/images/event-1.jpg',
+    imageUrl: '/images/event-1.png',
     promoted: true
   },
   {
@@ -26,21 +26,21 @@ const events: Event[] = [
     title: 'Handmade & Vintage Fair',
     date: 'Apr 5-7, 2024',
     location: 'Pike Place Market',
-    imageUrl: '/images/event-2.jpg'
+    imageUrl: '/images/event-2.png'
   },
   {
     id: '3',
     title: 'Pacific NW Craft Exhibition',
     date: 'Apr 20-21, 2024',
     location: 'Washington State Convention Center',
-    imageUrl: '/images/event-3.jpg'
+    imageUrl: '/images/event-3.png'
   },
   {
     id: '4',
     title: 'Indigenous Art Market',
     date: 'May 1-3, 2024',
     location: 'Museum of History & Industry',
-    imageUrl: '/images/event-4.jpg'
+    imageUrl: '/images/event-4.png'
   }
 ];
 

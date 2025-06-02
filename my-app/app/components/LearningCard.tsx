@@ -53,7 +53,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
         rel="noopener noreferrer"
         className="block"
       >
-        <div className="relative aspect-video w-full">
+        <div className="relative aspect-video w-full bg-[#3d2f1f]/10 dark:bg-[#e8dcc8]/10">
           <Image
             src={thumbnailUrl}
             alt={title}
@@ -62,7 +62,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
-          <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center transition-opacity hover:bg-opacity-25">
+          <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 flex items-center justify-center transition-all">
             <div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center transform transition-transform hover:scale-110">
               <div className="w-0 h-0 border-t-8 border-t-transparent border-l-16 border-l-[#b8860b] border-b-8 border-b-transparent ml-2"></div>
             </div>
