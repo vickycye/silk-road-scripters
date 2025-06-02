@@ -1,17 +1,17 @@
-import CardGrid from "../components/CardGrid";
-import Searchbar from "../components/Searchbar";
+import MarketSearch from "../components/MarketSearch";
+import MarketEvents from "../components/MarketEvents";
 
 export default function Markets() {
   return (
-    <main>
-      <div className="min-h-screen bg-silk-bg dark:bg-silk-dark-bg">
-        <header className="bg-silk-bg shadow dark:bg-silk-dark-bg">
-          <div className="container mx-auto py-6 px-4">
-            <Searchbar/>
-          </div>
-        </header>
-
-        <CardGrid />
+    <main className="min-h-screen bg-[#e6e1d6] dark:bg-[#3c3c3c] pt-20">
+      <div className="container mx-auto">
+        <h1 className="text-3xl font-bold text-[#3d2f1f] dark:text-[#e8dcc8] text-center mb-8">
+          Discover Artisan Markets & Fairs
+        </h1>
+        <MarketSearch />
+        <div className="mt-8">
+          <MarketEvents />
+        </div>
       </div>
     </main>
   );

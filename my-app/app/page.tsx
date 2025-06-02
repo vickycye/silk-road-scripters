@@ -16,6 +16,9 @@ export default function Home() {
           </header>
 
           <CardGrid />
+          <div className="container mx-auto px-4 py-8 text-center">
+            <p className="text-[#3d2f1f] dark:text-[#e8dcc8] text-lg italic opacity-75">More lovely products coming soon...</p>
+          </div>
         </div>
       </main>
     </div>

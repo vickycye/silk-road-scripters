@@ -10,6 +10,7 @@ interface CardProps {
     author: string; // author of the creation -- who made this?
     description: string; // description of the card -- what is this item? 
     imageUrl: string; // URL of the image -- location of the image
+    price: number;
 }
 
 const InteractiveCard: React.FC<CardProps> = ({
@@ -18,6 +19,7 @@ const InteractiveCard: React.FC<CardProps> = ({
     author,
     description,
     imageUrl,
+    price
 }) => {
     // like, share constants
     const [isLiked, setIsLiked] = useState(false);
@@ -59,6 +61,7 @@ const InteractiveCard: React.FC<CardProps> = ({
                     <h3 className="text-lg font-semibold text-[#3d2f1f] dark:text-[#e8dcc8] mb-1 truncate">{title}</h3>
                     <p className="text-sm text-[#8b4513] dark:text-[#deb887] line-clamp-2 font-bold mb-1">{author}</p>
                     <p className="text-sm text-[#5d4e3a] dark:text-[#b8b0a0] line-clamp-2">{description}</p>
+                    <p className="text-sm text-[#b8860b] dark:text-[#d4a574] font-semibold mt-2">${price.toFixed(2)}</p>
                     
                     {/* Action buttons */}
                     <div className="absolute bottom-3 right-3 flex space-x-2">
